@@ -15,11 +15,11 @@
     "trailingComma": "es5"
   },
   "keywords": [],
-  "name": "@KingsIke/ecommerce_services",
+  "name": " /ecommerce_services",
   "author": "KingsIke",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/KingsIke/ecommerce_services.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -35,8 +35,15 @@
     }
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^8.14.0",
+    "cloudinary": "^2.2.0",
     "express": "^4.19.2",
-    "typescript": "^5.5.2"
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.3",
+    "typescript": "^5.5.2",
+    "winston": "^3.13.1",
+    "winston-elasticsearch": "^0.19.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.7",
