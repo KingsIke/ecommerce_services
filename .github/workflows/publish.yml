@@ -18,9 +18,11 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: |
-          echo @KingsIke:https://npm.pkg.github.com/ > .npmrc
-          echo '//npm.pkg.github.com/:_authToken=${{secrets.NPM_TOKEN}}' >> .npmrc
-      - run: npm publish
+          echo @KingsIke:https://npm.pkg.github.com/ > build/.npmrc
+          echo '//npm.pkg.github.com/:_authToken=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' >> build/.npmrc
+      - run : npm publish
         working-directory: ./build
         env: 
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+
+
