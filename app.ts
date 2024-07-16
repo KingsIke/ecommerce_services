@@ -1,0 +1,1 @@
+import kingd from './script/babel-preset'
