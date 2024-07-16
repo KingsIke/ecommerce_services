@@ -1,1 +1,1 @@
-import kingd from './script/babel-preset'
+import kingd from './scripts/babel-preset'
