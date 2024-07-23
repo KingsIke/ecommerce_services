@@ -8,22 +8,22 @@
     "lib": ["DOM","ESNext"],                                      
     "emitDecoratorMetadata": true,  
     /* Modules */
-    "module": "ESNext",                          
+    "module": "commonjs",                          
     "rootDir": "./src",                                 
     "moduleResolution": "Node",                     
     "resolveJsonModule": true,                        
 
     /* Emit */
     "noEmitOnError": true,         
-    "emitDeclarationOnly": true,         
+    "emitDeclarationOnly": false,         
     "sourceMap": true,                              
-    "outDir": "build",                                  
+    "outDir": "build/src",                                  
     "importHelpers": true,      
     "forceConsistentCasingInFileNames": true,  
     "strict": true,    
     "pretty": true,                                
     "skipLibCheck": true                               
   },
-  "include":["src", "src/index.ts"],
+  "include":["src"],
   "exclude": ["node_modules"]
 }
