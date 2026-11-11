@@ -8,9 +8,9 @@
   },
   "scripts": {
     "compile": "tsc -w",
-    "build": "npm run build:cjs && npm run build:esm && tsc --outDir build/src && node scripts/build-package.js",
-    "build:cjs": "cross-env BABEL_ENV=cjs babel src --presets=./scripts/babel-preset.js --extensions .ts,.tsx --ignore src/**/*.specs.tsx --out-dir build/cjs --source-maps",
-    "build:esm": "cross-env BABEL_ENV=esm babel src --presets=./scripts/babel-preset.js --extensions .ts,.tsx --ignore src/**/*.specs.tsx --out-dir build/esm --source-maps"
+    "build": "node init && npm run build:cjs && npm run build:esm && tsc --outDir build/src && node scripts/build-package.js",
+    "build:cjs": "node init && cross-env BABEL_ENV=cjs babel src --presets=./scripts/babel-preset.js --extensions .ts,.tsx --ignore src/**/*.specs.tsx --out-dir build/cjs --source-maps",
+    "build:esm": "node init && cross-env BABEL_ENV=esm babel src --presets=./scripts/babel-preset.js --extensions .ts,.tsx --ignore src/**/*.specs.tsx --out-dir build/esm --source-maps"
   },
   "prettier": {
     "printWidth": 80,
@@ -44,7 +44,7 @@
     "express": "^4.19.2",
     "http-status-codes": "^2.3.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.4.3",
+    "mongoose": "^8.24.7",
     "typescript": "^5.5.2",
     "winston": "^3.13.1",
     "winston-elasticsearch": "^0.19.0"
